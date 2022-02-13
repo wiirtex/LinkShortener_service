@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "b355273a-89c0-448f-8a75-b6902ce3d97b",
+		"name": "Ozon-LinkShortener",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"link\": \"https://google.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:15001/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "15001",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"link\": {{shortId}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:15001/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "15001",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "link",
+							"value": "http://localhost:15001/fOIGkALNPV",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Redirect",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
